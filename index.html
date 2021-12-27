@@ -21,25 +21,65 @@
     <link rel="stylesheet" href="./Develop/css/style.css" />
     <title>Work Day Scheduler</title>
   </head>
-
   <body>
+    <!--Centerd header and displayed time into p element matching currentDay id-->
     <header class="jumbotron text-center">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
-      <ul id="" class="list-group">
-        <li id="" class="list-group-item d-flex justify-content-evenly m-1 col-12"><p class="">9am</p><textarea class="form-control rounded-corners"></textarea><button class="btn btn-block bg-warning col-3">PH</button></li>
-        <li id="" class="list-group-item d-flex justify-content-evenly m-1 col-12"><p class="">10am</p><textarea class="form-control rounded-corners"></textarea><button class="btn btn-block bg-warning col-3">PH</button></li>
-        <li id="" class="list-group-item d-flex justify-content-evenly m-1 col-12"><p class="">11am</p><textarea class="form-control rounded-corners"></textarea><button class="btn btn-block bg-warning col-3">PH</button></li>
-        <li id="" class="list-group-item d-flex justify-content-evenly m-1 col-12"><p class="">12pm</p><textarea class="form-control rounded-corners"></textarea><button class="btn btn-block bg-warning col-3">PH</button></li>
-        <li id="" class="list-group-item d-flex justify-content-evenly m-1 col-12"><p class="">1pm</p><textarea class="form-control rounded-corners"></textarea><button class="btn btn-block bg-warning col-3">PH</button></li>
-        <li id="" class="list-group-item d-flex justify-content-evenly m-1 col-12"><p class="">2pm</p><textarea class="form-control rounded-corners"></textarea><button class="btn btn-block bg-warning col-3">PH</button></li>
-        <li id="" class="list-group-item d-flex justify-content-evenly m-1 col-12"><p class="">3pm</p><textarea class="form-control rounded-corners"></textarea><button class="btn btn-block bg-warning col-3">PH</button></li>
-        <li id="" class="list-group-item d-flex justify-content-evenly m-1 col-12"><p class="">4pm</p><textarea class="form-control rounded-corners"></textarea><button class="btn btn-block bg-warning col-3">PH</button></li>
-        <li id="" class="list-group-item d-flex justify-content-evenly m-1 col-12"><p class="">5pm</p><textarea class="form-control rounded-corners"></textarea><button class="btn btn-block bg-warning col-3">PH</button></li>
+      <!--Created 9 hour time blocks with their own li element id defining them, textarea and save button-->
+      <ul id="task-form-modal" class="list-group">
+
+        <li id="list-schedule-nine" class="list-group-item rounded-corners p-0 d-flex justify-content-evenly m-1 col-12">
+          <p class="mt-2 col-1">9am</p>
+          <textarea  id="modalTaskDescription" class="form-control textarea rounded-corners col-10"></textarea>
+          <button id="btn-save" data-role="button" class="btn btn-block bg-info col-1">SAVE</button> 
+        </li>
+        <li id="list-schedule-ten" class="list-group-item rounded-corners p-0 d-flex justify-content-evenly m-1 col-12">
+          <p class="mt-2 col-1">10am</p>
+          <textarea id="modalTaskDescription" class="form-control textarea rounded-corners col-10"></textarea>
+          <button id="btn-save" data-role="button" class="btn btn-block bg-info col-1">SAVE</button> 
+        </li>
+        <li id="list-schedule-eleven" class="list-group-item rounded-corners p-0 d-flex justify-content-evenly m-1 col-12">
+          <p class="mt-2 col-1">11am</p>
+          <textarea id="modalTaskDescription" class="form-control textarea rounded-corners col-10"></textarea>
+          <button id="btn-save" data-role="button" class="btn btn-block bg-info col-1">SAVE</button> 
+        </li>
+        <li id="list-schedule-twelve" class="list-group-item rounded-corners p-0 d-flex justify-content-evenly m-1 col-12">
+          <p class="mt-2 col-1">12pm</p>
+          <textarea id="modalTaskDescription" class="form-control textarea rounded-corners col-10"></textarea>
+          <button id="btn-save" data-role="button" class="btn btn-block bg-info col-1">SAVE</button> 
+        </li>
+        <li id="list-schedule-one" class="list-group-item rounded-corners p-0 d-flex justify-content-evenly m-1 col-12">
+          <p class="mt-2 col-1">1pm</p>
+          <textarea  id="modalTaskDescription" class="form-control textarea rounded-corners col-10"></textarea>
+          <button id="btn-save" data-role="button" class="btn btn-block bg-info col-1">SAVE</button> 
+        </li>
+        <li id="list-schedule-two" class="list-group-item rounded-corners p-0 d-flex justify-content-evenly m-1 col-12">
+          <p class="mt-2 col-1">2pm</p>
+          <textarea  id="modalTaskDescription" class="form-control textarea rounded-corners col-10"></textarea>
+          <button id="btn-save" data-role="button" class="btn btn-block bg-info col-1">SAVE</button> 
+        </li>
+        <li id="list-schedule-three" class="list-group-item rounded-corners p-0 d-flex justify-content-evenly m-1 col-12">
+          <p class="mt-2 col-1">3pm</p>
+          <textarea  id="modalTaskDescription" class="form-control textarea rounded-corners col-10"></textarea>
+          <button id="btn-save" data-role="button" class="btn btn-block bg-info col-1">SAVE</button>
+         </li>
+        <li id="list-schedule-four" class="list-group-item rounded-corners p-0 d-flex justify-content-evenly m-1 col-12">
+          <p class="mt-2 col-1">4pm</p>
+          <textarea  id="modalTaskDescription" class="form-control textarea rounded-corners col-10"></textarea>
+          <button id="btn-save" data-role="button" class="btn btn-block bg-info col-1">SAVE</button> 
+        </li>
+        <li id="list-schedule-five" class="list-group-item rounded-corners p-0 d-flex justify-content-evenly m-1 col-12">
+          <p class="mt-2 col-1">5pm</p>
+          <textarea  id="modalTaskDescription" class="form-control textarea rounded-corners col-10"></textarea>
+          <button id="btn-save" data-role="button" class="btn btn-block bg-info col-1">SAVE</button> 
+        </li>
+
       </ul>
+
     </div>
 
 
